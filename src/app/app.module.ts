@@ -7,6 +7,7 @@ import { PluginProxyComponent } from './plugin-proxy.component';
 import { HomeComponent } from './home/home.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { TransferComponent } from './transfer/transfer.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { TransferComponent } from './transfer/transfer.component';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

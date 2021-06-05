@@ -3,4 +3,9 @@
 
     <h5 class="pb-3">Эта страница является частью нашего host-application, которое собирает в себе множество приложений от
         различных бизнес-юнитов.</h5>
+
+    <label>
+        Ваше имя:
+        <input type="text" id="username" name="username" [(ngModel)]="username" (change)="setName()">
+    </label>
 </div>
