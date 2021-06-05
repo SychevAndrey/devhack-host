@@ -8,4 +8,6 @@
         Ваше имя:
         <input type="text" id="username" name="username" [(ngModel)]="username" (change)="setName()">
     </label>
+
+    <h2 *ngIf="oilFlag">Мы знаем, вы любите нефть!</h2>
 </div>

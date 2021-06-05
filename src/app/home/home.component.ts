@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
     username: string = '';
     dbPromise: any
+    oilFlag: boolean
     constructor() { }
 
     ngOnInit(): void {
@@ -18,6 +19,11 @@ export class HomeComponent implements OnInit {
                 db.createObjectStore('host');
             },
         });
+        this.checkOilFlag()
+    }
+
+    async checkOilFlag() {
+        (await this.dbPromise).get('remote2', 'oil').then((value: boolean) => this.oilFlag = value);
     }
 
     async setName() {
