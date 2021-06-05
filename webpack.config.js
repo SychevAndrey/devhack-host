@@ -24,6 +24,7 @@ module.exports = {
         new ModuleFederationPlugin({
             remotes: {
                 "remote1": "remote1@https://devhack-remote1.vercel.app/remoteEntry.js",
+                "remote2": "remote2@https://dev-hack-remote2.vercel.app/remoteEntry.js",
             },
             shared: {
                 "@angular/core": { singleton: true, strictVersion: true },

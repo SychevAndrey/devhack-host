@@ -6,17 +6,17 @@ export class LookupService {
     lookup(): Promise<RemoteComponentConfig[]> {
         return Promise.resolve([
             {
-                remoteEntry: 'http://localhost:3001/remoteEntry.js',
+                remoteEntry: 'https://dev-hack-remote2.vercel.app/remoteEntry.js',
                 remoteName: 'remote2',
                 exposedModule: './BTCComponent',
-                displayName: 'BTCWidget',
+                displayName: 'BTCComponent',
                 componentName: 'BTCComponent'
             },
             {
-                remoteEntry: 'http://localhost:3001/remoteEntry.js',
+                remoteEntry: 'https://dev-hack-remote2.vercel.app/remoteEntry.js',
                 remoteName: 'remote2',
                 exposedModule: './OilComponent',
-                displayName: 'OilWidget',
+                displayName: 'OilComponent',
                 componentName: 'OilComponent'
             }
         ] as RemoteComponentConfig[]);
