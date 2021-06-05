@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     }
 
     async checkOilFlag() {
-        (await this.dbPromise).get('remote2', 'oil').then((value: boolean) => this.oilFlag = value);
+        (await this.dbPromise).get('host', 'oil').then((value: boolean) => this.oilFlag = value);
     }
 
     async setName() {
