@@ -7,7 +7,7 @@ import { openDB } from 'idb';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    username: string = '';
+    cash: number | undefined;
     dbPromise: any;
     oilFlag: boolean;
     constructor() {}
@@ -28,6 +28,6 @@ export class HomeComponent implements OnInit {
     }
 
     async setName() {
-        (await this.dbPromise).put('host', this.username, 'user');
+        (await this.dbPromise).put('host', this.cash, 'cash');
     }
 }

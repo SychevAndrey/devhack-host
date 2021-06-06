@@ -8,12 +8,16 @@
 
     <div class="d-flex flex-column">
         <label class="pb-3">
-            Ваше имя:
-            <input
-                type="text"
-                id="username"
-                name="username"
-                [(ngModel)]="username"
+            Сколько денег вы хотели бы вложить в активы с высокой доходностью?
+
+            <br>
+            $<input
+                min="0"
+                type="number"
+                id="cash"
+                name="cash"
+                step="1000"
+                [(ngModel)]="cash"
                 (change)="setName()"
             />
         </label>
