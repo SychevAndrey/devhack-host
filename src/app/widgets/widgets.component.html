@@ -1,8 +1,8 @@
 <div class="p-5">
     <h1>Динамическая подгрузка</h1>
 
-    <button class="btn btn-primary me-md-2" type="button" (click)="add(configs[0])">Добавить курс биткоина</button>
-    <button class="btn btn-primary me-md-2" type="button" (click)="add(configs[1])">Добавить цены на нефть</button>
+    <button *ngIf="!btcAdded" class="btn btn-primary me-md-2" type="button" (click)="add(configs[0])">Добавить курс биткоина</button>
+    <button *ngIf="!oilAdded" class="btn btn-primary me-md-2" type="button" (click)="add(configs[1])">Добавить цены на нефть</button>
 
     <div class="row">
         <div class="mt-2" *ngFor="let c of configs2; let i = index;">
